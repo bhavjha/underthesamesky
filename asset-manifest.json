@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/underthesamesky/static/css/main.d9fe6591.css",
-    "main.js": "/underthesamesky/static/js/main.f61c642f.js",
+    "main.css": "/underthesamesky/static/css/main.e7179049.css",
+    "main.js": "/underthesamesky/static/js/main.2ccced5d.js",
     "static/js/787.8b612f1b.chunk.js": "/underthesamesky/static/js/787.8b612f1b.chunk.js",
     "static/media/underthesamesky-default-bg.jpg": "/underthesamesky/static/media/underthesamesky-default-bg.0402abdb8a7371b327a6.jpg",
     "index.html": "/underthesamesky/index.html",
-    "main.d9fe6591.css.map": "/underthesamesky/static/css/main.d9fe6591.css.map",
-    "main.f61c642f.js.map": "/underthesamesky/static/js/main.f61c642f.js.map",
+    "main.e7179049.css.map": "/underthesamesky/static/css/main.e7179049.css.map",
+    "main.2ccced5d.js.map": "/underthesamesky/static/js/main.2ccced5d.js.map",
     "787.8b612f1b.chunk.js.map": "/underthesamesky/static/js/787.8b612f1b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d9fe6591.css",
-    "static/js/main.f61c642f.js"
+    "static/css/main.e7179049.css",
+    "static/js/main.2ccced5d.js"
   ]
 }
