@@ -1,0 +1,70 @@
+.upload-image-modal {
+    height: 200px;
+    display: flex;
+    padding:0 0 0 60px ;
+}
+
+.upload-image-modal:hover {
+    cursor: pointer;
+}
+
+.add-your-sky{
+    display: flex;
+    padding: 0 40px 0 40px;
+}
+
+.add-your-sky:hover{
+    cursor: pointer;
+}
+
+#upload-icon {
+    padding-top: 14px;
+    padding-right: 10px;
+}
+
+
+.modal-text {
+    font-family: 'Source Serif Pro', serif;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    line-height: 25px;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+}
+
+button {
+    height: 70px;
+    background-color: #5d5d5d82;
+    width: 250px;
+    font-size: 20px;
+    margin: 10px;
+    margin-left: 0px;
+    margin-bottom: 40px;
+}
+
+.modal-button-text {
+    color:white;
+    font-family: 'Source Serif Pro', serif;
+}
+
+.upload-to-firebase
+{
+    background-color: black;
+
+}
+
+#city-location{
+    margin: 1px;
+    margin-top: 5px;
+    width: 550px;
+    height: 50px
+}
+
+#city-location-alt{
+    margin: 1px;
+    margin-top: 5px;
+    width: 550px;
+    height: 50px
+}
+
+

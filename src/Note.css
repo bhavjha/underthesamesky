@@ -1,0 +1,180 @@
+.topnav {
+    display: flex;
+    flex-direction: row;
+}
+
+.title-location {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    width: 75%;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-right: 40px;
+    flex:3.3;
+
+}
+
+.title-add-sky {
+    flex:1;
+    padding: 10px;
+}
+
+.website-title {
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-top: 20px ;
+    font-size: calc(12px + 2vmin);
+
+}
+
+hr {
+    color: #FFFFFF;
+    height: 1px;
+    margin-top: -30px;
+}
+
+.website-text {
+    font-family: 'Source Serif Pro', serif;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    line-height: 25px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    letter-spacing: 0.1em;
+    font-size: calc(3px + 2vmin);
+
+}
+
+.location {
+    display: flex;
+}
+
+#location-icon {
+    padding-top: 14px;
+    padding-right: 10px;
+}
+
+.add-your-sky{
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+#upload-icon {
+    padding-top: 14px;
+    padding-right: 10px;
+}
+
+.midnav {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-right: 2%;
+}
+
+.side-nav {
+    margin: 40px;
+    align-self: flex-end;
+}
+
+.bottomnav {
+    display: flex;
+    margin-bottom: 2%;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.add-sky-note {
+    margin-left: 20px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#copy-link-icon:hover {
+    cursor: pointer;
+}
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  /* Tooltip text */
+  .tooltip .icon-tooltiptext {
+    visibility: hidden;
+    width: 80px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 400;
+    line-height: 25px;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .icon-tooltiptext {
+    visibility: visible;
+  }
+
+.add-sky-note-modal {
+    height: 200px;
+    width: 600px;
+    display: flex;
+}
+
+.modal-text {
+    font-family: 'Source Serif Pro', serif;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    line-height: 25px;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+}
+
+button {
+    height: 70px;
+    background-color: #a09e9e34;
+    width: 250px;
+    margin: 10px;
+    margin-left: 0px;
+    margin-bottom: 40px;
+}
+
+.modal-button-text {
+    color:white;
+    font-family: 'Source Serif Pro', serif;
+}
+
+#sky-note {
+    width: 550px;
+    height: 50px
+}
+
+.upload-note-button {
+    background-color: black;
+}
+
+#view-note-text {
+    width: 300px;
+    height: 100px;
+    overflow: auto;
+}
