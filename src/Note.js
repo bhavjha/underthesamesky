@@ -50,11 +50,11 @@ function Note({elementToNote}) {
                         aria-labelledby="modal-label"
                     >
                     <div>
-                        <IconContext.Provider value={{ style: {fontSize: '50px', color: "#5d5d5dc0"}}}>
-                        {/* <div onClick={() => setShow(false)}>
+                        {/* <IconContext.Provider value={{ style: {fontSize: '50px', color: "#5d5d5dc0"}}}>
+                        <div onClick={() => setShow(false)}>
                             <MdClose />
-                        </div> */}
-                        </IconContext.Provider>
+                        </div>
+                        </IconContext.Provider> */}
                         <p className='view-note-text modal-text' id='view-note-text'>{elementToNote}</p>
                         <br></br>
                         <p className='modal-text'>(Press escape key to close the popup)</p>
@@ -65,7 +65,7 @@ function Note({elementToNote}) {
             <div>
                 <span className="icon-tooltiptext">View notes</span>
                 <IconContext.Provider value={{ style: {fontSize: '60px', color: "rgb(255,255,255)"}}}>
-                <div id='sky-note-icon'>
+                <div id='sky-note-icon' alt-text='view note about this sky picture'>
                     <MdOutlineStickyNote2 />
                 </div>
                 </IconContext.Provider>

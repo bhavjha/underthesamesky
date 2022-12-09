@@ -45,51 +45,51 @@ const RandomlyPositionedModal = styled(Modal)`
 let skyURL ="";
 let currentNote= "";
 
-function handleNoteUpload() {
+// function handleNoteUpload() {
 
-    //TODO 
-    //COULD REWRITE METADATA NOW - BUT SHOWS ERROR IN UPDATE 
+//     //TODO 
+//     //COULD REWRITE METADATA NOW - BUT SHOWS ERROR IN UPDATE 
 
-    // console.log("adding note?");
-    // let skynote = document.getElementById('sky-note').value;
-    // skyNotes[skyURL] = skynote;
+//     // console.log("adding note?");
+//     // let skynote = document.getElementById('sky-note').value;
+//     // skyNotes[skyURL] = skynote;
 
-    // const storage = getStorage();
+//     // const storage = getStorage();
  
-    // const url = new URL(skyURL);
-    // console.log(url.href,"---",
-    //     url.protocol,"---",
-    //     url.username,"---",
-    //     url.password,"---",
-    //     url.host,"---",
-    //     url.hostname,"---",
-    //     url.port,"---",
-    //     url.pathname,"---SEEEEE ->", url.pathname.split("2F")[1],"--------",
-    //     url.search,"---",
-    //     url.hash,);
+//     // const url = new URL(skyURL);
+//     // console.log(url.href,"---",
+//     //     url.protocol,"---",
+//     //     url.username,"---",
+//     //     url.password,"---",
+//     //     url.host,"---",
+//     //     url.hostname,"---",
+//     //     url.port,"---",
+//     //     url.pathname,"---SEEEEE ->", url.pathname.split("2F")[1],"--------",
+//     //     url.search,"---",
+//     //     url.hash,);
 
-    // let skyRefLocation = 'files/'+url.pathname.split("2F")[1]; 
-    // const skyRef = ref(storage, skyRefLocation);
-    // // const skyRef = ref(storage, 'images/forest.jpg');
+//     // let skyRefLocation = 'files/'+url.pathname.split("2F")[1]; 
+//     // const skyRef = ref(storage, skyRefLocation);
+//     // // const skyRef = ref(storage, 'images/forest.jpg');
 
-    // var myCustomMetadata = {
-    //     customMetadata : {
-    //      'skyNotes': skyNotes
-    //      }
-    //    }
+//     // var myCustomMetadata = {
+//     //     customMetadata : {
+//     //      'skyNotes': skyNotes
+//     //      }
+//     //    }
 
-    //           // Update metadata properties
-    //         updateMetadata(skyRef, myCustomMetadata)
-    //         .then((myCustomMetadata) => {
-    //           // Updated metadata for 'images/IMG_1.jpg' is returned in the Promise
-    //           console.log("metadata updated =", myCustomMetadata);
-    //         }).catch((error) => {
-    //           // Uh-oh, an error occurred!
-    //           console.log("metadata error in updating add-note");
-    //         });
+//     //           // Update metadata properties
+//     //         updateMetadata(skyRef, myCustomMetadata)
+//     //         .then((myCustomMetadata) => {
+//     //           // Updated metadata for 'images/IMG_1.jpg' is returned in the Promise
+//     //           console.log("metadata updated =", myCustomMetadata);
+//     //         }).catch((error) => {
+//     //           // Uh-oh, an error occurred!
+//     //           console.log("metadata error in updating add-note");
+//     //         });
 
 
-}
+// }
 
 
 function changeSky() {
@@ -99,7 +99,9 @@ function changeSky() {
 // }
 
     let rand = Math.floor(Math.random()*40 + 1);
-    skyURL = `https://firebasestorage.googleapis.com/v0/b/underthesamesky-1c1bd.appspot.com/o/files%2FIMG_${rand}.jpeg?alt=media&token=c14b5f1d-63bd-48e9-be95-15a94de0477a`
+    //skyURL = `https://firebasestorage.googleapis.com/v0/b/underthesamesky-1c1bd.appspot.com/o/files%2FIMG_${rand}.jpeg?alt=media&token=c14b5f1d-63bd-48e9-be95-15a94de0477a`;
+    skyURL = `https://firebasestorage.googleapis.com/v0/b/underthesamesky-1c1bd.appspot.com/o/files%2FIMG_${rand}.jpeg?alt=media&token=c38be9cb-130d-420e-8ead-47de164de6e7`;
+    
     console.log("new sky number = ", rand);
 
     document.getElementById('App').style.backgroundImage=`url(${skyURL})`; // specify the image path here
@@ -113,8 +115,9 @@ function changeSky() {
     getMetadata(skyRef)
       .then((metadata) => {
         // Metadata now contains the metadata for 'images/sky.jpg'
+        console.log('metadata for this sky = ', metadata.customMetadata);
         document.getElementById('sky-location').innerText = metadata.customMetadata.location;
-        document.getElementById('citylocationalt').alt=metadata.customMetadata.alt;
+        document.getElementById('App').alt=metadata.customMetadata.alt;
         currentNote = metadata.customMetadata.alt;
 
       })
@@ -125,8 +128,7 @@ function changeSky() {
         currentNote = "They did not talk about this sky :/";
         changeSky();
       });
-
-    
+   
 }
 
 
@@ -152,7 +154,7 @@ function Elements() {
           </div> 
           <div className='location'>
             <IconContext.Provider value={{ style: {fontSize: '40px', color: "rgb(255,255,255)", outline: "black"}}}>
-            <div id='location-icon'>
+            <div id='location-icon' alt-text='location of the sky'>
                 <MdOutlineLocationOn />
             </div>
             </IconContext.Provider>
@@ -175,7 +177,7 @@ function Elements() {
         <div className="tooltip side-nav add-sky-note" onClick={() => {navigator.clipboard.writeText(skyURL); alert("Link to sky copied to clipboard")}}>
             <span className="icon-tooltiptext">Copy link</span>
             <IconContext.Provider value={{ style: {fontSize: '60px', color: "rgb(255,255,255)"}}}>
-            <div id='copy-link-icon'>
+            <div id='copy-link-icon' alt-text='copy link to this sky picture'>
                 <MdOutlineContentCopy />
             </div>
             </IconContext.Provider>

@@ -150,14 +150,16 @@ button:hover{
     letter-spacing: 0.1em;
 }
 
-button {
-    height: 70px;
-    background-color: #a09e9e34;
-    width: 250px;
-    margin: 10px;
-    margin-left: 0px;
-    margin-bottom: 40px;
+ #sky-note-icon {
+    height: 60px;
+    background-color: #5d5d5d82;
+    width: 20px;
+    font-size: 20px;
+    box-shadow: 2px 2px 2px 2px rgba(52, 52, 52, 0.153);
+    border-radius: 15px;
 }
+
+
 
 .modal-button-text {
     color:white;
