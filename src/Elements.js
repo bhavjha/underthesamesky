@@ -99,7 +99,6 @@ function changeSky() {
 // }
 
     let rand = Math.floor(Math.random()*40 + 1);
-    //skyURL = `https://firebasestorage.googleapis.com/v0/b/underthesamesky-1c1bd.appspot.com/o/files%2FIMG_${rand}.jpeg?alt=media&token=c14b5f1d-63bd-48e9-be95-15a94de0477a`;
     skyURL = `https://firebasestorage.googleapis.com/v0/b/underthesamesky-1c1bd.appspot.com/o/files%2FIMG_${rand}.jpeg?alt=media&token=c38be9cb-130d-420e-8ead-47de164de6e7`;
     
     console.log("new sky number = ", rand);
