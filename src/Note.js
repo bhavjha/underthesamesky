@@ -20,8 +20,6 @@ const Backdrop = styled("div")`
   opacity: 0.5;
 `;
 
-// we use some pseudo random coords so nested modals
-// don't sit right on top of each other.
 const RandomlyPositionedModal = styled(Modal)`
   position: fixed;
   width: 600px;
@@ -43,8 +41,8 @@ function Note({elementToNote}) {
     //console.log("element to note in Note:", {elementToNote});
 
     return(
-        <div className="tooltip" onClick={() => setShow(true)}>
-            <div className="add-sky-note-modal">
+        <div className="tooltip add-sky-note-modal" onClick={() => setShow(true)}>
+            <div className="">
                 <RandomlyPositionedModal
                         show={show}
                         onHide={() => setShow(false)}

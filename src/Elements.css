@@ -127,6 +127,13 @@ footer {
 
 .add-sky-note {
     margin-left: 20px;
+
+    height: 60px;
+    background-color: #5d5d5d82;
+    width: 60px;
+    font-size: 20px;
+    box-shadow: 2px 2px 2px 2px rgba(52, 52, 52, 0.153);
+    border-radius: 15px;
 }
 
 button:hover{

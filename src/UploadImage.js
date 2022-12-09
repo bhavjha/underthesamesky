@@ -1,6 +1,5 @@
 import './UploadImage.css';
 
-import { MdLocationOn } from "react-icons/md";
 import {IconContext} from "react-icons";
 import { MdFileUpload } from "react-icons/md";
 
@@ -109,23 +108,13 @@ function UploadImage() {
             }
         ); 
 
-        
-            //         // Update metadata properties
-            // updateMetadata(storageRef, newMetadata)
-            // .then((metadata) => {
-            //   // Updated metadata for 'images/IMG_1.jpg' is returned in the Promise
-            //   console.log("metadata updated =", newMetadata);
-            // }).catch((error) => {
-            //   // Uh-oh, an error occurred!
-            //   console.log("metadata error in updating");
-            // });
            
     }
 
     return (
       <>
       <div className="upload-image-modal">
-        <div className='add-your-sky' onClick={() => setShow(true)}>
+        <button className='add-your-sky' onClick={() => setShow(true)}>
             <IconContext.Provider value={{ style: {fontSize: '60px', color: "rgb(255,255,255)"}}}>
             <div id='upload-icon'>
                 <MdFileUpload />
@@ -153,7 +142,7 @@ function UploadImage() {
                 </div>
                 </RandomlyPositionedModal>
             </div>
-        </div>
+        </button>
 
 
       </div>

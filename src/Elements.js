@@ -25,8 +25,7 @@ const Backdrop = styled("div")`
   opacity: 0.5;
 `;
 
-// we use some pseudo random coords so nested modals
-// don't sit right on top of each other.
+
 const RandomlyPositionedModal = styled(Modal)`
   position: fixed;
   width: 600px;
@@ -44,7 +43,6 @@ const RandomlyPositionedModal = styled(Modal)`
 
 
 let skyURL ="";
-// let skyNotes={};
 let currentNote= "";
 
 function handleNoteUpload() {
@@ -100,20 +98,12 @@ function changeSky() {
 //   return Math.floor(Math.random() * (max - min + 1) + min)
 // }
 
-    let rand = Math.floor(Math.random()*20 + 1);
+    let rand = Math.floor(Math.random()*40 + 1);
     skyURL = `https://firebasestorage.googleapis.com/v0/b/underthesamesky-1c1bd.appspot.com/o/files%2FIMG_${rand}.jpeg?alt=media&token=c14b5f1d-63bd-48e9-be95-15a94de0477a`
     console.log("new sky number = ", rand);
 
     document.getElementById('App').style.backgroundImage=`url(${skyURL})`; // specify the image path here
 
-    //add notes to metadata and view that - maybe call this crowdsourced decsription of the sky? accessibility idea
-
-
-    //Alternate method to access metadata
-    // let storage = Storage.storage()
-    // let yourFirestoreURL = "https://firebasestorage.googleapis.com/v0/b/art-track.appspot.com/o/images%2Fu1nffdGQ7QPLIMp7N11vSOYorUM2%2FCapture.JPG?alt=media&token=86081f67-9065-4a13-aa0b-14fab7d44bf3"
-    // let storageRef = storage.reference(forURL: yourFirestoreURL)
-    // print(storageRef.name)
 
     // Create a reference to the file whose metadata we want to retrieve
     const storage = getStorage();
@@ -123,15 +113,9 @@ function changeSky() {
     getMetadata(skyRef)
       .then((metadata) => {
         // Metadata now contains the metadata for 'images/sky.jpg'
-        //console.log("metadata of this sky is -", metadata.customMetadata.location);
         document.getElementById('sky-location').innerText = metadata.customMetadata.location;
-        //document.getElementById('citylocationalt').alt=metadata.customMetadata.alt;
-
-        //TODO - ADD METADATA DESCRIPTION TO NOTES - EACH PERSON PUTS THEIR STORY AND SKY. NO CROWD SOURCE
-        //document.getElementById('view-note-text').innerText = metadata.customMetadata.alt;
+        document.getElementById('citylocationalt').alt=metadata.customMetadata.alt;
         currentNote = metadata.customMetadata.alt;
-        //console.log("current note text after getting metadata in element.js = ", currentNote);
-
 
       })
       .catch((error) => {
@@ -155,7 +139,6 @@ function Elements() {
      const [data, setData] = useState('');
      const elementToNote = () => {
        setData(currentNote);
-       //console.log("set data to current note to send to child =", currentNote);
      }
 
     return (
