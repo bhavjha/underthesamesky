@@ -126,7 +126,7 @@ function UploadImage() {
       <>
       <div className="upload-image-modal">
         <div className='add-your-sky' onClick={() => setShow(true)}>
-            <IconContext.Provider value={{ style: {fontSize: '50px', color: "rgb(255,255,255)"}}}>
+            <IconContext.Provider value={{ style: {fontSize: '60px', color: "rgb(255,255,255)"}}}>
             <div id='upload-icon'>
                 <MdFileUpload />
             </div>

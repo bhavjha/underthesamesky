@@ -164,11 +164,11 @@ function Elements() {
       <div className='topnav'>
         <div className='title-location'>
           <div>
-          <h2 className="website-title">Under The Same Sky</h2>
+          <h1 className="website-title">Under The Same Sky</h1>
           <hr/> 
           </div> 
           <div className='location'>
-            <IconContext.Provider value={{ style: {fontSize: '30px', color: "rgb(255,255,255)", outline: "black"}}}>
+            <IconContext.Provider value={{ style: {fontSize: '40px', color: "rgb(255,255,255)", outline: "black"}}}>
             <div id='location-icon'>
                 <MdOutlineLocationOn />
             </div>
