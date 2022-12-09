@@ -20,6 +20,7 @@
 #upload-icon {
     padding-top: 14px;
     padding-right: 10px;
+
 }
 
 
@@ -33,13 +34,16 @@
 }
 
 button {
-    height: 70px;
+    height: 100px;
     background-color: #5d5d5d82;
-    width: 250px;
+    width: 350px;
     font-size: 20px;
     margin: 10px;
     margin-left: 0px;
     margin-bottom: 40px;
+    border: 2px solid #5d5d5dc0;
+    box-shadow: 2px 2px 2px 2px rgba(52, 52, 52, 0.153);
+    border-radius: 5px;
 }
 
 .modal-button-text {

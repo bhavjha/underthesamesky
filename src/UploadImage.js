@@ -125,7 +125,6 @@ function UploadImage() {
     return (
       <>
       <div className="upload-image-modal">
-
         <div className='add-your-sky' onClick={() => setShow(true)}>
             <IconContext.Provider value={{ style: {fontSize: '50px', color: "rgb(255,255,255)"}}}>
             <div id='upload-icon'>
@@ -150,7 +149,7 @@ function UploadImage() {
                     <input type="text" id="city-location-alt" name="city-location-alt" className='modal-text' required></input>
                     <br></br><br></br>
                     <button className='modal-button-text upload-to-firebase' onClick={handleUpload}>Upload my sky</button>
-                    <p className='modal-text'>Press escape key to close the popup</p>
+                    <p className='modal-text'>(Press escape key to close the popup)</p>
                 </div>
                 </RandomlyPositionedModal>
             </div>

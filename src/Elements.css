@@ -1,6 +1,7 @@
 .topnav {
     display: flex;
     flex-direction: row;
+    padding-right: 2%;
 }
 
 .title-location {
@@ -11,18 +12,20 @@
     flex-direction: column;
     margin-left: 40px;
     margin-right: 40px;
-    flex:3.3;
+    flex:3;
 
 }
 
 .title-add-sky {
     flex:1;
     padding: 10px;
+
+
 }
 
 .website-title {
     font-family: 'Source Serif Pro', serif;
-    font-weight: 600;
+    font-weight: 1000;
     font-size: 36px;
     line-height: 45px;
     letter-spacing: 0.1em;
@@ -30,7 +33,11 @@
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding-top: 20px ;
     font-size: calc(12px + 2vmin);
-
+    text-shadow:
+    0.02em 0 black,
+    0 0.02em black,
+    -0.02em 0 black,
+    0 -0.02em black;
 }
 
 hr {
@@ -42,11 +49,16 @@ hr {
 .website-text {
     font-family: 'Source Serif Pro', serif;
     color: rgb(255, 255, 255);
-    font-weight: 400;
+    font-weight: 700;
     line-height: 25px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     letter-spacing: 0.1em;
     font-size: calc(3px + 2vmin);
+    text-shadow:
+    0.02em 0 black,
+    0 0.02em black,
+    -0.02em 0 black,
+    0 -0.02em black;
 
 }
 
@@ -85,7 +97,8 @@ footer {
 .add-your-sky{
     display: flex;
     align-items: center;
-    margin-right: 40px;
+    margin-right: 20px;
+    margin-top: 40px;
 }
 
 #upload-icon {
@@ -172,15 +185,6 @@ button:hover{
     line-height: 25px;
     font-size: 20px;
     letter-spacing: 0.1em;
-}
-
-button {
-    height: 70px;
-    background-color: #4140407d;
-    width: 250px;
-    margin: 10px;
-    margin-left: 0px;
-    margin-bottom: 40px;
 }
 
 

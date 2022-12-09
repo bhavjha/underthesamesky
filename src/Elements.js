@@ -1,5 +1,5 @@
 import './Elements.css';
-import { MdLocationOn, MdOutlineContentCopy, MdOutlineStickyNote2, MdOutlineModeEditOutline } from "react-icons/md";
+import { MdOutlineLocationOn, MdOutlineContentCopy, MdOutlineStickyNote2, MdOutlineModeEditOutline } from "react-icons/md";
 import {IconContext} from "react-icons";
 
 import UploadImage from './UploadImage.js';
@@ -100,7 +100,7 @@ function changeSky() {
 //   return Math.floor(Math.random() * (max - min + 1) + min)
 // }
 
-    let rand = Math.floor(Math.random()*9 + 1);
+    let rand = Math.floor(Math.random()*20 + 1);
     skyURL = `https://firebasestorage.googleapis.com/v0/b/underthesamesky-1c1bd.appspot.com/o/files%2FIMG_${rand}.jpeg?alt=media&token=c14b5f1d-63bd-48e9-be95-15a94de0477a`
     console.log("new sky number = ", rand);
 
@@ -139,13 +139,10 @@ function changeSky() {
         console.log("ERROR! metadata of this sky is not there?");
         document.getElementById('sky-location').innerText = "Find it yourself :P";
         currentNote = "They did not talk about this sky :/";
+        changeSky();
       });
 
     
-}
-
-function displayNotes() {
-//display all notes - add modal 
 }
 
 
@@ -171,9 +168,9 @@ function Elements() {
           <hr/> 
           </div> 
           <div className='location'>
-            <IconContext.Provider value={{ style: {fontSize: '30px', color: "rgb(255,255,255)"}}}>
+            <IconContext.Provider value={{ style: {fontSize: '30px', color: "rgb(255,255,255)", outline: "black"}}}>
             <div id='location-icon'>
-                <MdLocationOn />
+                <MdOutlineLocationOn />
             </div>
             </IconContext.Provider>
             <p className="website-text" id="sky-location">Los Angeles, California</p>
@@ -188,47 +185,18 @@ function Elements() {
       <div className='midnav'>
 
         <div className="side-nav add-sky-note" onClick={() => elementToNote()}> 
-        {/* onClick={displayNotes} */}
             <Note elementToNote={data}/>
         </div>
 
 
         <div className="tooltip side-nav add-sky-note" onClick={() => {navigator.clipboard.writeText(skyURL); alert("Link to sky copied to clipboard")}}>
             <span className="icon-tooltiptext">Copy link</span>
-            <IconContext.Provider value={{ style: {fontSize: '50px', color: "rgb(255,255,255)"}}}>
+            <IconContext.Provider value={{ style: {fontSize: '60px', color: "rgb(255,255,255)"}}}>
             <div id='copy-link-icon'>
                 <MdOutlineContentCopy />
             </div>
             </IconContext.Provider>
         </div>
-{/* 
-
-            <div className="tooltip side-nav add-sky-note" onClick={() => setShow(true)}>
-                <span className="icon-tooltiptext">Add your note to this sky!</span>
-                <IconContext.Provider value={{ style: {fontSize: '50px', color: "rgb(255,255,255)"}}}>
-                <div id='add-sky-note-icon'>
-                    <MdOutlineModeEditOutline />
-                </div>
-                </IconContext.Provider>
-            </div>
-            <div className="add-sky-note-modal">
-                <RandomlyPositionedModal
-                        show={show}
-                        onHide={() => setShow(false)}
-                        renderBackdrop={renderBackdrop}
-                        aria-labelledby="modal-label"
-                    >
-                    <div>
-
-                        <label htmlFor="sky-note" className='modal-text' >Describe this sky, tell us what you think</label>
-                        <input type="text" id="sky-note" name="sky-note" className='modal-text' required></input>
-                        <br></br><br></br>
-                        <button className='modal-button-text upload-note-button' onClick={handleNoteUpload}>Done</button>
-                        <p className='modal-text'>Press escape key to close the popup</p>
-                    </div>
-                    </RandomlyPositionedModal>
-            </div> */}
-
 
       </div>
       <div className='bottomnav'>

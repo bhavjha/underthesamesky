@@ -1,5 +1,5 @@
 import './Elements.css';
-import {  MdOutlineStickyNote2 } from "react-icons/md";
+import {  MdOutlineStickyNote2, MdClose } from "react-icons/md";
 import {IconContext} from "react-icons";
 
 import {useState} from "react"
@@ -52,16 +52,21 @@ function Note({elementToNote}) {
                         aria-labelledby="modal-label"
                     >
                     <div>
+                        <IconContext.Provider value={{ style: {fontSize: '50px', color: "#5d5d5dc0"}}}>
+                        {/* <div onClick={() => setShow(false)}>
+                            <MdClose />
+                        </div> */}
+                        </IconContext.Provider>
                         <p className='view-note-text modal-text' id='view-note-text'>{elementToNote}</p>
                         <br></br>
-                        <p className='modal-text'>Press escape key to close the popup</p>
+                        <p className='modal-text'>(Press escape key to close the popup)</p>
                     </div>
                     </RandomlyPositionedModal>
             </div>
         <br></br>
             <div>
                 <span className="icon-tooltiptext">View notes</span>
-                <IconContext.Provider value={{ style: {fontSize: '50px', color: "rgb(255,255,255)"}}}>
+                <IconContext.Provider value={{ style: {fontSize: '60px', color: "rgb(255,255,255)"}}}>
                 <div id='sky-note-icon'>
                     <MdOutlineStickyNote2 />
                 </div>
